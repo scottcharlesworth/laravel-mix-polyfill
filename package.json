@@ -1,0 +1,32 @@
+{
+  "name": "laravel-mix-polyfill",
+  "version": "0.0.1",
+  "homepage": "https://github.com/scottcharlesworth/laravel-mix-polyfill#readme",
+  "description": "A Laravel Mix extension for Babel Polyfill",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottcharlesworth/laravel-mix-polyfill.git"
+  },
+  "keywords": [
+    "laravel",
+    "laravel mix",
+    "mix",
+    "polyfill",
+    "babel",
+    "webpack"
+  ],
+  "author": {
+    "name": "Scott Charlesworth"
+  },
+  "bugs": {
+    "url": "https://github.com/scottcharlesworth/laravel-mix-polyfill/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.0"
+  },
+  "peerDependencies": {
+    "laravel-mix": "^4.0.0"
+  }
+}
