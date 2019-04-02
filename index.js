@@ -10,6 +10,7 @@ class Polyfill {
             enabled: true,
             useBuiltIns: "usage",
             targets: "defaults",
+            corejs: 2,
         }, config);
     }
 
@@ -21,7 +22,8 @@ class Polyfill {
 
     babelConfig() {
         let polyfillPresets = {
-            "useBuiltIns": this.config.useBuiltIns
+            "useBuiltIns": this.config.useBuiltIns,
+            "corejs": this.config.corejs,
         };
 
         if (this.config.targets) {
