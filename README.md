@@ -39,3 +39,4 @@ mix.js('resources/js/app.js', 'public/js')
 | enabled     | `boolean`                     | `true`       | Should polyfill be used |
 | useBuiltIns | `string`                      | `"usage"`    | [See here](https://babeljs.io/docs/en/babel-preset-env#usebuiltins) and [here](https://babeljs.io/docs/en/babel-polyfill#usage-in-node-browserify-webpack) for detailed description. |
 | targets     | `string`, `object`, `boolean` | `"defaults"` | Allows a target (browser) environment to be specified. This can either be: <br> &bull; a [browserslist-compatible](https://github.com/ai/browserslist) query (`"> 0.25%, not dead"`), <br> &bull; an object of minimum environment versions to support (`{"chrome": "58", "ie": "11"}`),<br> &bull; or `false` to transform all ECMAScript 2015+ code by default. <br><br> You can test string values on [browserl.ist](https://browserl.ist/). |
+| corejs      | `number`                      | `2`          | The version of core-js to be used. |
