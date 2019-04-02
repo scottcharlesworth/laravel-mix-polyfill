@@ -1,3 +1,9 @@
+<p align="center">
+<a href="https://www.npmjs.com/package/laravel-mix-polyfill"><img src="https://img.shields.io/npm/v/laravel-mix-polyfill.svg" alt="NPM"></a>
+<a href="https://npmcharts.com/compare/laravel-mix-polyfill?minimal=true"><img src="https://img.shields.io/npm/dt/laravel-mix-polyfill.svg" alt="NPM"></a>
+<a href="https://www.npmjs.com/package/laravel-mix-polyfill"><img src="https://img.shields.io/npm/l/laravel-mix-polyfill.svg" alt="NPM"></a>
+</p>
+
 # Laravel Mix Polyfill
 
 A Laravel Mix extension for Babel Polyfill.
