@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-polyfill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/scottcharlesworth/laravel-mix-polyfill#readme",
   "description": "A Laravel Mix extension for Babel Polyfill",
   "main": "index.js",
