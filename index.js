@@ -31,6 +31,15 @@ class Polyfill {
             polyfillPresets.targets = this.config.targets;
         }
 
+        let returnObject = {
+            presets: [
+                [
+                    '@babel/preset-env',
+                    polyfillPresets
+                ]
+            ],
+        };
+
         return this.config.enabled ? {
             presets: [
                 [
