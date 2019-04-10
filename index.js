@@ -44,6 +44,10 @@ class Polyfill {
             ],
         };
 
+        if (this.config.debug) {
+            returnObject.cacheDirectory = false;
+        }
+
         return this.config.enabled ? returnObject : {};
     }
 }
