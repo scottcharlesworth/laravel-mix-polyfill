@@ -31,6 +31,10 @@ class Polyfill {
             polyfillPresets.targets = this.config.targets;
         }
 
+        if (this.config.debug) {
+            polyfillPresets.debug = this.config.debug;
+        }
+
         let returnObject = {
             presets: [
                 [
