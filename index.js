@@ -11,6 +11,7 @@ class Polyfill {
             useBuiltIns: "usage",
             targets: "defaults",
             corejs: 2,
+            debug: false,
         }, config);
     }
 
@@ -30,14 +31,24 @@ class Polyfill {
             polyfillPresets.targets = this.config.targets;
         }
 
-        return this.config.enabled ? {
+        if (this.config.debug) {
+            polyfillPresets.debug = this.config.debug;
+        }
+
+        let returnObject = {
             presets: [
                 [
                     '@babel/preset-env',
                     polyfillPresets
                 ]
             ],
-        } : {};
+        };
+
+        if (this.config.debug) {
+            returnObject.cacheDirectory = false;
+        }
+
+        return this.config.enabled ? returnObject : {};
     }
 }
 
