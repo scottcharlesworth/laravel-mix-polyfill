@@ -40,14 +40,7 @@ class Polyfill {
             ],
         };
 
-        return this.config.enabled ? {
-            presets: [
-                [
-                    '@babel/preset-env',
-                    polyfillPresets
-                ]
-            ],
-        } : {};
+        return this.config.enabled ? returnObject : {};
     }
 }
 
