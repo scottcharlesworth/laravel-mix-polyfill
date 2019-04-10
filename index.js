@@ -11,6 +11,7 @@ class Polyfill {
             useBuiltIns: "usage",
             targets: "defaults",
             corejs: 2,
+            debug: false,
         }, config);
     }
 
