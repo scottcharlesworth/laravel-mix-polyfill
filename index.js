@@ -2,7 +2,7 @@ const mix = require('laravel-mix');
 
 class Polyfill {
     dependencies() {
-        return ['@babel/polyfill'];
+        return ['core-js', 'regenerator-runtime'];
     }
 
     register(config) {
