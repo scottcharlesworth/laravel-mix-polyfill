@@ -26,8 +26,11 @@ class Polyfill {
     babelConfig() {
         let polyfillPresets = {
             "useBuiltIns": this.config.useBuiltIns,
-            "corejs": this.config.corejs,
         };
+
+        if (this.config.useBuiltIns !== false) {
+            polyfillPresets.corejs = this.config.corejs;
+        }
 
         if (this.config.targets) {
             polyfillPresets.targets = this.config.targets;
