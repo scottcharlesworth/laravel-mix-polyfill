@@ -6,7 +6,7 @@
 
 # Laravel Mix Polyfill
 
-A Laravel Mix extension for Babel Polyfill.
+A Laravel Mix extension to include polyfills by using [Babel](https://babeljs.io/), [core-js](https://github.com/zloirock/core-js), and [regenerator-runtime](https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime).
 
 ## Usage
 
