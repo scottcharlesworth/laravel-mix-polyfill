@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.2.0"
+    "@babel/polyfill": "^7.4.4"
   },
   "peerDependencies": {
     "laravel-mix": "^4.0.0"
