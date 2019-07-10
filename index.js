@@ -15,14 +15,6 @@ class Polyfill {
         }, config);
     }
 
-    webpackConfig(webpackConfig) {
-        if ((this.config.enabled === true) && (this.config.useBuiltIns === false)) {
-            Object.entries(webpackConfig.entry).forEach(v => {
-                webpackConfig.entry[v[0]].unshift("@babel/polyfill");
-            });
-        }
-    }
-
     babelConfig() {
         let polyfillPresets = {
             "useBuiltIns": this.config.useBuiltIns,
