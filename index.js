@@ -10,7 +10,7 @@ class Polyfill {
             enabled: true,
             useBuiltIns: "usage",
             targets: "defaults",
-            corejs: 2,
+            corejs: 3,
             debug: false,
         }, config);
     }
