@@ -27,6 +27,6 @@
     "@babel/polyfill": "^7.4.4"
   },
   "peerDependencies": {
-    "laravel-mix": "^4.0.0"
+    "laravel-mix": "^4.0.0 || ^5.0.0"
   }
 }
