@@ -19,7 +19,7 @@ class Polyfill {
     webpackConfig(webpackConfig) {
         if ((this.config.enabled === true)
             && (this.config.useBuiltIns === "entry")
-            && (this.config.useBuiltIns !== false)) {
+            && (this.config.entryPoints !== false)) {
             Object.entries(webpackConfig.entry).forEach(v => {
                 webpackConfig.entry[v[0]].unshift("laravel-mix-polyfill/entry/"
                     + this.config.entryPoints
