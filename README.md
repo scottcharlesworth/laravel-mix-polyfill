@@ -48,3 +48,17 @@ mix.js('resources/js/app.js', 'public/js')
 | entryPoints | `string`, `boolean`           | `"stable"`   | Used when `useBuiltIns` is set to `"entry"`. See below for possible values. |
 | corejs      | `number`                      | `3`          | The version of core-js to be used. |
 | debug       | `boolean`                     | `false`      | Outputs the targets/plugins used to the console. |
+
+### Entry Points
+
+In `core-js@3` the entry points were changed to [allow for more flexibility](https://github.com/zloirock/core-js/blob/master/docs/2019-03-19-core-js-3-babel-and-a-look-into-the-future.md#packages-entry-points-and-modules-names).
+
+The following common presets have been included for ease, and will be inserted into the entry point for you automatically. `"stable"` has been set as the default [as it is a full equal](https://github.com/zloirock/core-js/blob/master/README.md#babelpolyfill) of the now deprecated `@babel/polyfill` package which was used previously.   
+
+| Value          | Description   |
+| -------------- | ------------- |
+| **`"stable"`** | Polyfill only stable `core-js` features - ES and web standards. |
+| `"all"`        | Polyfill all `core-js` features. |
+| `"es"`         | Polyfill only stable ES features. |
+| `"classic"`    | Imports copied from the latest `@babel/polyfill` package (before it was deprecated). |
+| `false`        | Do not use a preset (you will need to add your own imports to the top of your entry point). |
