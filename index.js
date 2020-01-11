@@ -10,9 +10,20 @@ class Polyfill {
             enabled: true,
             useBuiltIns: "usage",
             targets: "defaults",
+            entryPoints: "stable",
             corejs: 3,
             debug: false,
         }, config);
+    }
+
+    webpackConfig(webpackConfig) {
+        if ((this.config.enabled === true)
+            && (this.config.useBuiltIns === "entry")
+            && (this.config.useBuiltIns !== false)) {
+            Object.entries(webpackConfig.entry).forEach(v => {
+                webpackConfig.entry[v[0]].unshift("laravel-mix-polyfill/" + this.config.entryPoints + ".js");
+            });
+        }
     }
 
     babelConfig() {
