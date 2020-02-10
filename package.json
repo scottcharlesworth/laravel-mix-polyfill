@@ -1,8 +1,8 @@
 {
   "name": "laravel-mix-polyfill",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "homepage": "https://github.com/scottcharlesworth/laravel-mix-polyfill#readme",
-  "description": "A Laravel Mix extension for Babel Polyfill",
+  "description": "A Laravel Mix extension to include polyfills by using Babel, core-js, and regenerator-runtime",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -24,7 +24,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/polyfill": "^7.4.4"
+    "core-js": "^2.6.9 || ^3.1.4",
+    "regenerator-runtime": "^0.13.2"
   },
   "peerDependencies": {
     "laravel-mix": "^4.0.0 || ^5.0.0"

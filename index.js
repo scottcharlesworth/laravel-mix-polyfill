@@ -2,7 +2,7 @@ const mix = require('laravel-mix');
 
 class Polyfill {
     dependencies() {
-        return ['@babel/polyfill'];
+        return ['core-js', 'regenerator-runtime'];
     }
 
     register(config) {
@@ -10,15 +10,20 @@ class Polyfill {
             enabled: true,
             useBuiltIns: "usage",
             targets: "defaults",
-            corejs: 2,
+            entryPoints: "stable",
+            corejs: 3,
             debug: false,
         }, config);
     }
 
     webpackConfig(webpackConfig) {
-        if ((this.config.enabled === true) && (this.config.useBuiltIns === false)) {
+        if ((this.config.enabled === true)
+            && (this.config.useBuiltIns === "entry")
+            && (this.config.entryPoints !== false)) {
             Object.entries(webpackConfig.entry).forEach(v => {
-                webpackConfig.entry[v[0]].unshift("@babel/polyfill");
+                webpackConfig.entry[v[0]].unshift("laravel-mix-polyfill/entry/"
+                    + this.config.entryPoints
+                    + ".js");
             });
         }
     }
