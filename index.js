@@ -26,6 +26,10 @@ class Polyfill {
                     + ".js");
             });
         }
+
+        if ((this.config.enabled === true) && (typeof this.config.targets === "string")) {
+            webpackConfig.target = 'browserslist:' + this.config.targets;
+        }
     }
 
     babelConfig() {
