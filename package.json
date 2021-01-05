@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-polyfill",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "homepage": "https://github.com/scottcharlesworth/laravel-mix-polyfill#readme",
   "description": "A Laravel Mix extension to include polyfills by using Babel, core-js, and regenerator-runtime",
   "main": "index.js",
@@ -28,6 +28,6 @@
     "regenerator-runtime": "^0.13.2"
   },
   "peerDependencies": {
-    "laravel-mix": "^4.0.0 || ^5.0.0"
+    "laravel-mix": "^6.0.0"
   }
 }
