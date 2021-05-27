@@ -30,6 +30,20 @@ class Polyfill {
         if ((this.config.enabled === true) && (typeof this.config.targets === "string")) {
             webpackConfig.target = 'browserslist:' + this.config.targets;
         }
+
+        if (this.config.debug === true) {
+            let javascriptIndex = null;
+
+            webpackConfig.module.rules.forEach(function (value, index) {
+                if (value['test'].toString() === '/\\.(cjs|mjs|jsx?|tsx?)$/') {
+                    javascriptIndex = index;
+                }
+            });
+
+            if (javascriptIndex) {
+                webpackConfig.module.rules[javascriptIndex]['use'][0]['options']['cacheDirectory'] = false;
+            }
+        }
     }
 
     babelConfig() {
@@ -57,10 +71,6 @@ class Polyfill {
                 ]
             ],
         };
-
-        if (this.config.debug) {
-            returnObject.cacheDirectory = false;
-        }
 
         return this.config.enabled ? returnObject : {};
     }
